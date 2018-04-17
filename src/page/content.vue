@@ -2,7 +2,7 @@
     <div>
       <myHead></myHead>
       <h2 v-text="data.title"></h2>
-      <p>作者:{{data.author.loginname}} &nbsp;&nbsp;发表于：{{$util.goodTime(data.create_at)}}</p>
+      <p v-if="data.author">作者:{{data.author.loginname}} &nbsp;&nbsp;发表于：{{$util.goodTime(data.create_at)}}</p>
       <hr>
       <article v-html="data.content"></article>
       <h3>网友回复：</h3>
