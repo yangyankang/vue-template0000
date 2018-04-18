@@ -16,8 +16,8 @@
     </div>
 </template>
 <script>
-import myHead from '../components/header'
-import myFooter from '../components/footer'
+import myHead from '../components/head'
+import myFooter from '../components/foot'
 
 export default{
   data () {

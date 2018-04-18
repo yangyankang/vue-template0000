@@ -1,6 +1,6 @@
 <template>
     <div>
-      <Header></Header>
+      <header-comp></header-comp>
       <div class="article_list">
         <ul>
           <li v-for="(i,index) in list" :key="index">
@@ -11,12 +11,12 @@
           </li>
         </ul>
       </div>
-      <Footer></Footer>
+      <footer-comp></footer-comp>
     </div>
 </template>
 <script>
-import Header from '../components/header'
-import Footer from '../components/footer'
+import HeaderComp from '../components/head'
+import FooterComp from '../components/foot'
 export default{
   data () {
     return {
@@ -24,8 +24,8 @@ export default{
     }
   },
   components: {
-    Header,
-    Footer
+    HeaderComp,
+    FooterComp
   },
   created () {
     this.$api.get('topics', null, r => {
